@@ -1,0 +1,11 @@
+---
+import { stats } from '@/data/stats';
+---
+<section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        {stats.map((s) => (
+          <div class="stat-card"><span class:list={['stat-number', { sh: s.accent }]}>{s.value}</span><span class="stat-label">{s.label}</span></div>
+        ))}</div>
+    </div>
+  </section>

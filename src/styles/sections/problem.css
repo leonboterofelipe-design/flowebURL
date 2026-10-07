@@ -1,0 +1,74 @@
+/* sections/problem */
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2px;
+}
+
+.prob-card {
+  padding: 40px 36px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+  transition: all .3s;
+}
+
+.prob-card:hover {
+  border-color: rgba(233,66,53,.25);
+}
+
+.prob-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,var(--google),transparent);
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.prob-card:hover::before {
+  opacity: 1;
+}
+
+.prob-icon {
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+  display: inline-block;
+}
+
+.prob-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.prob-card p {
+  font-size: .95rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width:960px) {
+  .problem-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:600px) {
+  .problem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prob-card {
+    padding: 28px 24px;
+  }
+}
+

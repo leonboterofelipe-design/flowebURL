@@ -1,0 +1,15 @@
+---
+import { pages } from '@/data/pages';
+interface Props { current: string }
+const items = pages[Astro.props.current].related.map((k) => pages[k]);
+---
+<section class="section related">
+  <div class="container">
+    <div class="section-header"><h2>Sigue explorando</h2></div>
+    <ul class="related-grid">
+      {items.map((p) => (
+        <li><a class="related-card" href={p.path}><h3>{p.h1}</h3><p>{p.description}</p></a></li>
+      ))}
+    </ul>
+  </div>
+</section>

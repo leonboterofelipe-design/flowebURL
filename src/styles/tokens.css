@@ -1,0 +1,26 @@
+/* Design tokens */
+
+:root {
+  --font: 'Plus Jakarta Sans Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --bg: #05070F;
+  --bg2: #080B16;
+  --card: #0E1320;
+  --teal: #2BBFB8;
+  --teal-dim: #1d8e89;
+  --shopify: #8ABF3A;
+  --shopify-dim: #6a9429;
+  --google: #E94235;
+  --meta: #1877F2;
+  --white: #EDF2FF;
+  --muted: #7A8AA0;
+  --dimmer: #2E3D52;
+  --border: rgba(255,255,255,0.07);
+  --border-teal: rgba(43,191,184,0.22);
+  --border-shopify: rgba(138,191,58,0.22);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --glow-teal: 0 0 20px rgba(43,191,184,.45),0 0 60px rgba(43,191,184,.18);
+  --glow-shopify: 0 0 20px rgba(138,191,58,.4),0 0 60px rgba(138,191,58,.15);
+  --glow-google: 0 0 20px rgba(233,66,53,.45),0 0 60px rgba(233,66,53,.15);
+  --glow-meta: 0 0 20px rgba(24,119,242,.45),0 0 60px rgba(24,119,242,.15);
+}

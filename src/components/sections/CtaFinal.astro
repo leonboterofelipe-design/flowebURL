@@ -1,0 +1,20 @@
+---
+import { site } from '@/config/site';
+import WhatsAppIcon from '@/components/icons/WhatsAppIcon.astro';
+---
+<section id="contacto" class="cta-section text-center">
+  <div class="cta-glow"></div>
+  <div class="container">
+    <span class="badge badge-shopify" style="margin-bottom:24px">🚀 Empieza Hoy</span>
+    <h2>¿Listo para lanzar<br><em>tu Shopify?</em></h2>
+    <p style="margin-left:auto;margin-right:auto">Diagnóstico inicial gratuito con tu Shopify Partner. Sin compromiso. Solo resultados.</p>
+    <div class="cta-buttons">
+      <a href={site.whatsapp} class="btn btn-shopify" target="_blank" rel="noopener noreferrer">
+        <WhatsAppIcon size={20} />
+        Hablar por WhatsApp
+      </a>
+      <a href={`mailto:${site.email}`} class="btn btn-ghost">Enviar email</a>
+    </div>
+    <p class="cta-note">Sin costo · Sin compromiso · Shopify Partner registrado</p>
+  </div>
+</section>

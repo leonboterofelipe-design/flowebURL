@@ -1,0 +1,17 @@
+---
+import { faqSchema } from '@/lib/schema';
+import type { Faq } from '@/data/faqs';
+interface Props { items: Faq[]; title?: string }
+const { items, title = 'Preguntas frecuentes' } = Astro.props;
+---
+<section class="section faq">
+  <div class="container">
+    <div class="section-header"><h2>{title}</h2></div>
+    <div class="faq-list">
+      {items.map((i) => (
+        <details class="faq-item"><summary>{i.q}</summary><p>{i.a}</p></details>
+      ))}
+    </div>
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema(items))} />
+</section>

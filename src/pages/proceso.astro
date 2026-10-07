@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { pages } from '@/data/pages';
+import CtaFinal from '@/components/sections/CtaFinal.astro';
+import PageHero from '@/components/sections/PageHero.astro';
+import Process from '@/components/sections/Process.astro';
+import RelatedLinks from '@/components/sections/RelatedLinks.astro';
+const m = pages.proceso;
+---
+<BaseLayout title={m.title} description={m.description}>
+  <PageHero page="proceso" />
+  <Process />
+  <RelatedLinks current="proceso" />
+  <CtaFinal />
+</BaseLayout>

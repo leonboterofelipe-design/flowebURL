@@ -1,0 +1,32 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { pages } from '@/data/pages';
+import CtaFinal from '@/components/sections/CtaFinal.astro';
+import Divider from '@/components/ui/Divider.astro';
+import Faq from '@/components/sections/Faq.astro';
+import Hero from '@/components/sections/Hero.astro';
+import Method from '@/components/sections/Method.astro';
+import Problem from '@/components/sections/Problem.astro';
+import Process from '@/components/sections/Process.astro';
+import RelatedLinks from '@/components/sections/RelatedLinks.astro';
+import Services from '@/components/sections/Services.astro';
+import ShopifyIntro from '@/components/sections/ShopifyIntro.astro';
+import Stats from '@/components/sections/Stats.astro';
+import { faqsHome } from '@/data/faqs';
+const m = pages.home;
+---
+<BaseLayout title={m.title} description={m.description}>
+  <Hero />
+  <Stats />
+  <ShopifyIntro />
+  <Divider variant="shopify" />
+  <Problem />
+  <Divider />
+  <Services />
+  <Divider />
+  <Method />
+  <Process />
+  <Faq items={faqsHome} />
+  <RelatedLinks current="home" />
+  <CtaFinal />
+</BaseLayout>

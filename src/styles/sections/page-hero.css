@@ -1,0 +1,14 @@
+/* page-hero (páginas internas): H1, intro, CTA, TL;DR, compartir */
+
+.page-hero { padding: 96px 0 40px; }
+.page-hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 16px; }
+.page-hero .lead { color: var(--muted); font-size: 1.12rem; line-height: 1.7; max-width: 56ch; margin-bottom: 24px; }
+.tldr { margin-top: 32px; max-width: 560px; padding: 20px 24px; background: var(--card); border: 1px solid var(--border-teal); border-left: 3px solid var(--teal); border-radius: var(--radius); }
+.tldr-title { font-weight: 700; margin-bottom: 8px; }
+.tldr ul { list-style: none; display: grid; gap: 6px; }
+.tldr li { color: var(--muted); font-size: 0.95rem; padding-left: 18px; position: relative; }
+.tldr li::before { content: ''; position: absolute; left: 0; top: 0.65em; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+.share { margin-top: 20px; color: var(--muted); font-size: 0.85rem; display: flex; gap: 14px; flex-wrap: wrap; }
+.share a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+.share a:hover { color: var(--teal); }
+@media (max-width: 600px) { .page-hero { padding: 64px 0 24px; } .page-hero .btn { width: 100%; justify-content: center; } }

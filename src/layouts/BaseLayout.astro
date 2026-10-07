@@ -1,0 +1,57 @@
+---
+import '@fontsource-variable/plus-jakarta-sans';
+import '../styles/main.css';
+import Navbar from '@/components/layout/Navbar.astro';
+import Footer from '@/components/layout/Footer.astro';
+import WhatsAppFloat from '@/components/layout/WhatsAppFloat.astro';
+import StickyCta from '@/components/layout/StickyCta.astro';
+import Analytics from '@/components/layout/Analytics.astro';
+import { site } from '@/config/site';
+import { pages } from '@/data/pages';
+import { organizationSchema, breadcrumbSchema } from '@/lib/schema';
+
+interface Props { title: string; description?: string; noindex?: boolean }
+const { title, description = site.description, noindex = false } = Astro.props;
+const path = Astro.url.pathname;
+const canonical = new URL(path, site.url).href;
+const current = Object.values(pages).find((p) => p.path === path);
+const graph = [
+  ...(path === '/' ? [organizationSchema()] : []),
+  ...(current && path !== '/' ? [breadcrumbSchema(current.name, path)] : []),
+];
+const gsc = import.meta.env.PUBLIC_GSC_TOKEN;
+---
+<!doctype html>
+<html lang={site.locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon1.jpg" />
+    <meta name="theme-color" content="#05070F" />
+    {noindex && <meta name="robots" content="noindex" />}
+    {gsc && <meta name="google-site-verification" content={gsc} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="es_CO" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+    {graph.map((g) => <script type="application/ld+json" set:html={JSON.stringify(g)} />)}
+    <Analytics />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <WhatsAppFloat />
+    <Navbar />
+    <main id="contenido"><slot /></main>
+    <Footer />
+    <StickyCta />
+  </body>
+</html>

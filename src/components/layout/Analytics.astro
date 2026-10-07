@@ -1,0 +1,16 @@
+---
+const id = import.meta.env.PUBLIC_GA4_ID;
+---
+{id && <script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`}></script>}
+{id && (
+  <script is:inline define:vars={{ id }}>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', id);
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href*="wa.link"], a[href^="mailto:"]');
+      if (a) gtag('event', 'generate_lead', { method: a.href.indexOf('mailto:') === 0 ? 'email' : 'whatsapp', link_url: a.href });
+    });
+  </script>
+)}

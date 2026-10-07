@@ -1,0 +1,16 @@
+---
+import { problems } from '@/data/problems';
+---
+<section id="problema" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-pink">⚠ El Problema</span>
+        <h2>¿Por qué tu página<br><em>no está vendiendo?</em></h2>
+        <p>En Colombia, el 68% de los carritos se abandonan antes del pago. No es falta de producto — es falta de infraestructura.</p>
+      </div>
+      <div class="problem-grid">
+        {problems.map((p) => (
+          <div class="prob-card"><div class="prob-icon">{p.icon}</div><h3>{p.title}</h3><p>{p.text}</p></div>
+        ))}</div>
+    </div>
+  </section>

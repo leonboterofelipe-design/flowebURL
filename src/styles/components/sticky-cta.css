@@ -1,0 +1,13 @@
+/* sticky-cta: barra fija solo en móvil */
+
+.sticky-cta { display: none; }
+
+@media (max-width: 600px) {
+  .sticky-cta {
+    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 900;
+    padding: 10px 5% calc(10px + env(safe-area-inset-bottom));
+    background: rgba(5, 7, 15, 0.92); backdrop-filter: blur(16px); border-top: 1px solid var(--border);
+  }
+  .sticky-cta .btn { width: 100%; justify-content: center; }
+  body { padding-bottom: 76px; }
+}

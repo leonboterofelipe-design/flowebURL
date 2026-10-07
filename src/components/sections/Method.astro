@@ -1,0 +1,16 @@
+---
+import { methods } from '@/data/methods';
+---
+<section id="metodologia" class="section text-center">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-teal">◈ Metodología</span>
+        <h2>Cuatro pilares.<br><em>Un objetivo: vender.</em></h2>
+        <p>Cada decisión respaldada en datos, el ecosistema Shopify y el comportamiento del consumidor colombiano.</p>
+      </div>
+      <div class="method-grid">
+        {methods.map((m) => (
+          <div class="method-card"><div class="method-num">{m.num}</div><h3>{m.title}</h3><p>{m.text}</p></div>
+        ))}</div>
+    </div>
+  </section>

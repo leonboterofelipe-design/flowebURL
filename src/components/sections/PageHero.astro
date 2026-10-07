@@ -1,0 +1,24 @@
+---
+import { pages } from '@/data/pages';
+import { site } from '@/config/site';
+interface Props { page: string }
+const m = pages[Astro.props.page];
+const url = new URL(m.path, site.url).href;
+const text = encodeURIComponent(`${m.title} ${url}`);
+---
+<section class="page-hero">
+  <div class="container">
+    <h1>{m.h1}</h1>
+    <p class="lead">{m.lead}</p>
+    <a class="btn btn-shopify" href={site.whatsapp} target="_blank" rel="noopener noreferrer">Pedir diagnóstico gratis</a>
+    <aside class="tldr" aria-label="Resumen">
+      <p class="tldr-title">En resumen</p>
+      <ul>{m.takeaways.map((t) => <li>{t}</li>)}</ul>
+    </aside>
+    <p class="share">
+      Compartir:
+      <a href={`https://wa.me/?text=${text}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </p>
+  </div>
+</section>

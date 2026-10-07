@@ -1,0 +1,14 @@
+/* components/divider */
+
+.neon-line {
+  height: 1px;
+  background: linear-gradient(90deg,transparent,var(--teal),transparent);
+  opacity: .2;
+}
+
+.neon-line-sh {
+  height: 1px;
+  background: linear-gradient(90deg,transparent,var(--shopify),transparent);
+  opacity: .18;
+}
+

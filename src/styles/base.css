@@ -1,0 +1,115 @@
+/* base */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  font-family: var(--font);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(rgba(43,191,184,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(43,191,184,.025) 1px,transparent 1px);
+  background-size: 72px 72px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 5%;
+  position: relative;
+  z-index: 2;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center .section-header p {
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dimmer);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--teal);
+}
+
+@media (max-width:960px) {
+  .section {
+    padding: 72px 0;
+  }
+}
+
+@media (max-width:600px) {
+  .container {
+    padding: 0 5%;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+}
+
+html { scroll-padding-top: 80px; }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+button, input, textarea, select { font: inherit; }
+.skip-link { position: absolute; left: -9999px; top: 0; z-index: 10000; padding: 10px 16px; background: var(--teal); color: #05070f; font-weight: 700; }
+.skip-link:focus { left: 16px; top: 16px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

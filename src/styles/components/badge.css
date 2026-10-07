@@ -1,0 +1,49 @@
+/* components/badge */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+.badge-teal {
+  background: rgba(43,191,184,.1);
+  color: var(--teal);
+  border: 1px solid var(--border-teal);
+}
+
+.badge-shopify {
+  background: rgba(138,191,58,.12);
+  color: var(--shopify);
+  border: 1px solid var(--border-shopify);
+}
+
+.badge-google {
+  background: rgba(233,66,53,.1);
+  color: #f97066;
+  border: 1px solid rgba(233,66,53,.25);
+}
+
+.badge-meta {
+  background: rgba(24,119,242,.1);
+  color: #60a5fa;
+  border: 1px solid rgba(24,119,242,.25);
+}
+
+.badge-pink {
+  background: rgba(233,66,53,.1);
+  color: #f97066;
+  border: 1px solid rgba(233,66,53,.25);
+}
+
+.badge-white {
+  background: rgba(255,255,255,.06);
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+

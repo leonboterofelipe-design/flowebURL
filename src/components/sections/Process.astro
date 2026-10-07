@@ -1,0 +1,16 @@
+---
+import { steps } from '@/data/steps';
+---
+<section id="proceso" class="process-section section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge badge-teal">→ Proceso</span>
+        <h2>De cero a ventas<br><em>en 4 pasos.</em></h2>
+        <p>Sin reuniones interminables. Sin sorpresas. Tu Shopify en producción, rápido.</p>
+      </div>
+      <div class="process-timeline">
+        {steps.map((s) => (
+          <div class="process-step"><div class="step-number">{s.num}</div><h4>{s.title}</h4><p>{s.text}</p></div>
+        ))}</div>
+    </div>
+  </section>

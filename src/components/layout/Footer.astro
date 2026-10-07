@@ -1,0 +1,19 @@
+---
+import Divider from '@/components/ui/Divider.astro';
+import { site } from '@/config/site';
+const year = new Date().getFullYear();
+---
+<Divider variant="shopify" />
+<footer class="footer-bar">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">Flo<em>Web</em> · CO</div>
+      <nav class="footer-nav" aria-label="Pie de página">
+        {site.nav.map((i) => <a href={i.href}>{i.label}</a>)}
+        <a href="/contacto/">Contacto</a>
+      </nav>
+      <span class="badge badge-shopify">Shopify Partner Registrado</span>
+      <p class="footer-copy">© {year} FloWeb (floweb.com.co) — Agencia Shopify Colombia. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>

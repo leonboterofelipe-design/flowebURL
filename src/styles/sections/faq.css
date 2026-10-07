@@ -1,0 +1,10 @@
+/* faq: acordeón con <details> */
+
+.faq-list { display: grid; gap: 10px; max-width: 760px; }
+.faq-item { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 0 22px; }
+.faq-item[open] { border-color: var(--border-teal); }
+.faq-item summary { cursor: pointer; list-style: none; padding: 18px 0; font-weight: 700; display: flex; justify-content: space-between; gap: 16px; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; color: var(--teal); font-size: 1.3rem; line-height: 1; }
+.faq-item[open] summary::after { content: '–'; }
+.faq-item p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; padding-bottom: 18px; }

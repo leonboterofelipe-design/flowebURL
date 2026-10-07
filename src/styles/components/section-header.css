@@ -1,0 +1,43 @@
+/* components/section-header */
+
+.section-header {
+  margin-bottom: 60px;
+}
+
+.section-header .badge {
+  margin-bottom: 18px;
+}
+
+.section-header h2 {
+  font-size: clamp(2.2rem,4.5vw,3.5rem);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.section-header h2 em {
+  font-style: normal;
+  color: var(--teal);
+  text-shadow: 0 0 30px rgba(43,191,184,.3);
+}
+
+.section-header h2 .sh {
+  font-style: normal;
+  color: var(--shopify);
+  text-shadow: 0 0 30px rgba(138,191,58,.25);
+}
+
+.section-header p {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 56ch;
+  line-height: 1.7;
+}
+
+@media (max-width:960px) {
+  .section-header h2 {
+    font-size: clamp(2rem,5vw,3rem);
+  }
+}
+

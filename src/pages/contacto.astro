@@ -1,0 +1,13 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { pages } from '@/data/pages';
+import CtaFinal from '@/components/sections/CtaFinal.astro';
+import PageHero from '@/components/sections/PageHero.astro';
+import RelatedLinks from '@/components/sections/RelatedLinks.astro';
+const m = pages.contacto;
+---
+<BaseLayout title={m.title} description={m.description}>
+  <PageHero page="contacto" />
+  <RelatedLinks current="contacto" />
+  <CtaFinal />
+</BaseLayout>

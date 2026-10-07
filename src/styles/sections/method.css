@@ -1,0 +1,63 @@
+/* sections/method */
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 2px;
+}
+
+.method-card {
+  padding: 40px 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: all .3s;
+}
+
+.method-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-teal);
+}
+
+.method-card:hover .method-num {
+  color: var(--teal);
+  text-shadow: 0 0 20px rgba(43,191,184,.3);
+}
+
+.method-num {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -.04em;
+  color: var(--dimmer);
+  line-height: 1;
+  margin-bottom: 16px;
+  transition: all .4s;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.method-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.method-card p {
+  font-size: .95rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width:960px) {
+  .method-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width:600px) {
+  .method-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

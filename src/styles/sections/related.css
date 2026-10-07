@@ -1,0 +1,7 @@
+/* related: enlaces internos entre páginas del clúster */
+
+.related-grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.related-card { display: block; height: 100%; padding: 24px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: inherit; transition: border-color 0.2s; }
+.related-card:hover { border-color: var(--border-teal); }
+.related-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.015em; }
+.related-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }

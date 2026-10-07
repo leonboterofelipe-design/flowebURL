@@ -1,0 +1,5 @@
+---
+interface Props { variant?: 'teal' | 'shopify' }
+const { variant = 'teal' } = Astro.props;
+---
+<div class={variant === 'shopify' ? 'neon-line-sh' : 'neon-line'} aria-hidden="true"></div>
