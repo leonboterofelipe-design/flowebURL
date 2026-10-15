@@ -7,6 +7,7 @@ import WhatsAppFloat from '@/components/layout/WhatsAppFloat.astro';
 import StickyCta from '@/components/layout/StickyCta.astro';
 import Analytics from '@/components/layout/Analytics.astro';
 import { site } from '@/config/site';
+import { gtmId } from '@/config/analytics';
 import { pages } from '@/data/pages';
 import { organizationSchema, breadcrumbSchema } from '@/lib/schema';
 
@@ -20,7 +21,6 @@ const graph = [
   ...(current && path !== '/' ? [breadcrumbSchema(current.name, path)] : []),
 ];
 const gsc = import.meta.env.PUBLIC_GSC_TOKEN;
-const gtmId = import.meta.env.PUBLIC_GTM_ID;
 ---
 <!doctype html>
 <html lang={site.locale}>
