@@ -20,6 +20,7 @@ const graph = [
   ...(current && path !== '/' ? [breadcrumbSchema(current.name, path)] : []),
 ];
 const gsc = import.meta.env.PUBLIC_GSC_TOKEN;
+const gtmId = import.meta.env.PUBLIC_GTM_ID;
 ---
 <!doctype html>
 <html lang={site.locale}>
@@ -47,6 +48,16 @@ const gsc = import.meta.env.PUBLIC_GSC_TOKEN;
     <Analytics />
   </head>
   <body>
+    {gtmId && (
+      <noscript>
+        <iframe
+          src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden"
+        />
+      </noscript>
+    )}
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <WhatsAppFloat />
     <Navbar />
