@@ -1,0 +1,38 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { pages } from '@/data/pages';
+import Clients from '@/components/sections/Clients.astro';
+import CompareTable from '@/components/sections/CompareTable.astro';
+import CtaFinal from '@/components/sections/CtaFinal.astro';
+import Faq from '@/components/sections/Faq.astro';
+import FeatureGrid from '@/components/sections/FeatureGrid.astro';
+import PageHero from '@/components/sections/PageHero.astro';
+import Process from '@/components/sections/Process.astro';
+import RelatedLinks from '@/components/sections/RelatedLinks.astro';
+import { medellinFeatures, medellinShipping } from '@/data/agencias';
+import { faqsAgenciaMedellin } from '@/data/faqs';
+import { serviceSchema } from '@/lib/schema';
+const m = pages.agenciaMedellin;
+---
+<BaseLayout title={m.title} description={m.description} schema={[serviceSchema('Agencia Shopify en Medellín', { type: 'City', name: 'Medellín' })]}>
+  <PageHero page="agenciaMedellin" />
+  <FeatureGrid
+    title="Por qué una agencia Shopify en Medellín"
+    intro='Una tienda que vende en la ciudad necesita la logística y los pagos de la ciudad. ¿Vendes en todo el país? Mira nuestra <a href="/agencia-shopify-colombia/">agencia Shopify para Colombia</a>.'
+    items={medellinFeatures}
+  />
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Envíos que dejamos listos en tu tienda</h2>
+        <p>Configuramos cada zona con su tarifa para que el cliente vea el costo real antes de pagar.</p>
+      </div>
+      <CompareTable caption="Configuración de envíos para tiendas Shopify en Medellín y Colombia" {...medellinShipping} />
+    </div>
+  </section>
+  <Clients />
+  <Process />
+  <Faq items={faqsAgenciaMedellin} title="Preguntas frecuentes sobre nuestra agencia Shopify en Medellín" />
+  <RelatedLinks current="agenciaMedellin" />
+  <CtaFinal />
+</BaseLayout>

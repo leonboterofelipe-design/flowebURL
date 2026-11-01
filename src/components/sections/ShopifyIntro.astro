@@ -1,5 +1,5 @@
 ---
-import { site } from '@/config/site';
+import { waLink } from '@/lib/whatsapp';
 ---
 <section id="shopify" class="shopify-section">
     <div class="container">
@@ -16,7 +16,7 @@ import { site } from '@/config/site';
             <li>Migraciones desde WooCommerce, Wix u otras plataformas</li>
             <li>Shopify Plus disponible para marcas de alto volumen</li>
           </ul>
-          <a href={site.whatsapp} class="btn btn-shopify" target="_blank" rel="noopener noreferrer">Habla con nosotros →</a>
+          <a href={waLink(Astro.url.pathname)} class="btn btn-shopify" target="_blank" rel="noopener noreferrer">Habla con nosotros →</a>
         </div>
         <div class="shopify-right">
           <div class="shopify-logo-area">
@@ -25,15 +25,15 @@ import { site } from '@/config/site';
             </div>
           </div>
           <div class="shopify-badge-card">
-            <h4>⚡ Desarrollo a medida</h4>
+            <h3>⚡ Desarrollo a medida</h3>
             <p>Themes custom, secciones dinámicas y checkout optimizado para la máxima conversión en el mercado colombiano.</p>
           </div>
           <div class="shopify-badge-card">
-            <h4>🔌 Integraciones locales</h4>
+            <h3>🔌 Integraciones locales</h3>
             <p>PSE, Nequi, Bancolombia, Contraentrega, Coordinadora, Servientrega — todo conectado a tu Shopify.</p>
           </div>
           <div class="shopify-badge-card">
-            <h4>📦 Gestión de inventario</h4>
+            <h3>📦 Gestión de inventario</h3>
             <p>Multi-bodega, sincronización con marketplaces y reportes en tiempo real para que siempre tengas el control.</p>
           </div>
         </div>

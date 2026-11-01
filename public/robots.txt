@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+# Paginaciones: evitan contenido duplicado
+Disallow: /page/
+Disallow: /*/page/
 
 Sitemap: https://floweb.com.co/sitemap.xml

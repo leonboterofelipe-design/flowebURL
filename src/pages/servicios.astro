@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { pages } from '@/data/pages';
+import Clients from '@/components/sections/Clients.astro';
 import CtaFinal from '@/components/sections/CtaFinal.astro';
 import Faq from '@/components/sections/Faq.astro';
 import PageHero from '@/components/sections/PageHero.astro';
@@ -12,6 +13,7 @@ const m = pages.servicios;
 <BaseLayout title={m.title} description={m.description}>
   <PageHero page="servicios" />
   <Services />
+  <Clients />
   <Faq items={faqsServicios} />
   <RelatedLinks current="servicios" />
   <CtaFinal />

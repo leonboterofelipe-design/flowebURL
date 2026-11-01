@@ -1,0 +1,53 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { pages } from '@/data/pages';
+import { waLink } from '@/lib/whatsapp';
+import CompareTable from '@/components/sections/CompareTable.astro';
+import CtaFinal from '@/components/sections/CtaFinal.astro';
+import Faq from '@/components/sections/Faq.astro';
+import PageHero from '@/components/sections/PageHero.astro';
+import RelatedLinks from '@/components/sections/RelatedLinks.astro';
+import { faqsCrearTienda } from '@/data/faqs';
+import { guideSteps, diyVsAgency, platforms } from '@/data/guide';
+const m = pages.crearTienda;
+---
+<BaseLayout title={m.title} description={m.description}>
+  <PageHero page="crearTienda" />
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Cómo crear una tienda en Shopify en 8 pasos</h2>
+        <p>Este es el orden que seguimos con cada marca. Si prefieres no hacerlo solo, <a href="/proceso/">así trabajamos contigo</a>.</p>
+      </div>
+      <ol class="guide-steps">
+        {guideSteps.map((s) => <li><h3>{s.title}</h3><p>{s.text}</p></li>)}
+      </ol>
+      <a class="btn btn-shopify guide-cta" href={waLink(Astro.url.pathname)} target="_blank" rel="noopener noreferrer">Quiero que creen mi tienda →</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>¿Crearla tú o con una agencia?</h2>
+        <p>Las dos opciones funcionan; cambia el tiempo que inviertes y lo que obtienes. Mira qué incluyen nuestros <a href="/servicios/">servicios</a>.</p>
+      </div>
+      <CompareTable caption="Crear tu tienda Shopify por tu cuenta frente a hacerlo con FloWeb" {...diyVsAgency} />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Shopify frente a WooCommerce y Wix</h2>
+        <p>Si aún no eliges plataforma, esta es la comparación rápida. ¿Ya vendes en otra plataforma? <a href="/shopify/">Te migramos a Shopify</a>.</p>
+      </div>
+      <CompareTable caption="Comparación de plataformas para crear una tienda online en Colombia" {...platforms} />
+    </div>
+  </section>
+
+  <Faq items={faqsCrearTienda} title="Preguntas frecuentes sobre crear una tienda en Shopify" />
+  <RelatedLinks current="crearTienda" />
+  <CtaFinal />
+</BaseLayout>

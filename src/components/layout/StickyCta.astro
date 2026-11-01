@@ -1,6 +1,6 @@
 ---
-import { site } from '@/config/site';
+import { waLink } from '@/lib/whatsapp';
 ---
 <div class="sticky-cta">
-  <a class="btn btn-shopify" href={site.whatsapp} target="_blank" rel="noopener noreferrer">Diagnóstico gratis por WhatsApp</a>
+  <a class="btn btn-shopify" href={waLink(Astro.url.pathname)} target="_blank" rel="noopener noreferrer">Diagnóstico gratis por WhatsApp</a>
 </div>

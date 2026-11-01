@@ -1,15 +1,66 @@
 export interface PageMeta {
   path: string; name: string; title: string; description: string;
   h1: string; lead: string; takeaways: string[]; related: string[];
+  waMessage?: string;
 }
 
 export const pages: Record<string, PageMeta> = {
   home: {
     path: '/', name: 'Inicio',
-    title: 'Agencia Shopify Partner en Colombia | FloWeb',
-    description: 'Diseñamos, lanzamos y escalamos tu tienda Shopify para el mercado colombiano. Pide tu diagnóstico inicial gratuito por WhatsApp.',
-    h1: 'Tu tienda Shopify que sí vende', lead: '', takeaways: [],
-    related: ['shopify', 'servicios', 'metodologia', 'proceso'],
+    title: 'Crear tienda en Shopify en Colombia | Agencia FloWeb',
+    description: 'Agencia Shopify Partner en Colombia: creamos tu tienda online con pagos locales (PSE, Nequi), SEO y pauta. Diagnóstico gratis por WhatsApp.',
+    h1: 'Creamos tu tienda Shopify en Colombia',
+    lead: '',
+    takeaways: [
+      'Creamos tu tienda Shopify desde cero o migramos la que ya tienes.',
+      'Pagos y envíos locales: PSE, Nequi, Mercado Pago y contraentrega.',
+      'Primer diseño en 72 horas y diagnóstico inicial gratuito.',
+      'Un solo equipo para tienda, SEO y pauta en Google y Meta.',
+    ],
+    related: ['crearTienda', 'agenciaColombia', 'servicios', 'proceso'],
+  },
+  crearTienda: {
+    path: '/crear-tienda-shopify/', name: 'Crear tienda Shopify',
+    title: 'Cómo crear una tienda en Shopify en Colombia | FloWeb',
+    description: 'Guía para crear tu tienda Shopify en Colombia: plan, dominio, pagos PSE y Nequi, envíos, páginas legales y SEO. O pide que la creemos por ti.',
+    h1: 'Crear tu tienda Shopify paso a paso',
+    lead: 'Los 8 pasos para abrir una tienda Shopify que venda en Colombia, con los pagos, envíos y requisitos legales del mercado local.',
+    takeaways: [
+      'Crear la tienda toma 8 pasos: cuenta, configuración, theme, productos, pagos, envíos, legales y SEO.',
+      'En Colombia lo que más pesa en la conversión son los pagos locales y la contraentrega.',
+      'Puedes hacerlo tú o delegarlo en una agencia Shopify Partner; abajo comparamos ambas opciones.',
+    ],
+    related: ['agenciaColombia', 'shopify', 'servicios'],
+    waMessage: 'Hola FloWeb, leí la guía para crear una tienda Shopify y prefiero que ustedes la creen. ¿Me cuentan cómo?',
+  },
+  agenciaColombia: {
+    path: '/agencia-shopify-colombia/', name: 'Agencia Shopify Colombia',
+    title: 'Agencia Shopify en Colombia: diseño y desarrollo | FloWeb',
+    description: 'Agencia Shopify Partner en Colombia: diseño, desarrollo y migración de tiendas con pagos locales, SEO y pauta. Diagnóstico gratis por WhatsApp.',
+    h1: 'Tu agencia Shopify Partner en Colombia',
+    lead: 'Diseñamos, desarrollamos y hacemos crecer tiendas Shopify para marcas colombianas: un solo equipo para la tienda, los pagos locales, el SEO y la pauta.',
+    takeaways: [
+      'Shopify Partner registrado: acceso a herramientas y soporte oficial.',
+      'Tienda lista para Colombia: PSE, Nequi, Mercado Pago, contraentrega y transportadoras.',
+      'Diseño a medida con primer avance en 72 horas.',
+      'Después del lanzamiento: SEO, Google Ads y Meta Ads con el mismo equipo.',
+    ],
+    related: ['agenciaMedellin', 'crearTienda', 'servicios', 'proceso'],
+    waMessage: 'Hola FloWeb, busco una agencia Shopify para crear mi tienda. ¿Me ayudan con el diagnóstico gratis?',
+  },
+  agenciaMedellin: {
+    path: '/agencia-shopify-medellin/', name: 'Agencia Shopify Medellín',
+    title: 'Agencia Shopify en Medellín para tu tienda online | FloWeb',
+    description: 'Agencia Shopify en Medellín: creamos tu tienda online con pagos y envíos locales, diseño a medida y SEO. Escríbenos y agenda tu diagnóstico gratis.',
+    h1: 'Agencia Shopify con sede en Medellín',
+    lead: 'Somos un equipo de Medellín que crea tiendas Shopify para marcas paisas y de todo el país, con la operación local resuelta desde el primer día.',
+    takeaways: [
+      'Equipo con sede en Medellín, mismo horario y mismo contexto que tu marca.',
+      'Envíos locales y nacionales y pago contraentrega configurados en tu tienda.',
+      'Diagnóstico inicial gratuito para definir catálogo, diseño y canales.',
+    ],
+    related: ['agenciaColombia', 'crearTienda', 'shopify', 'contacto'],
+    waMessage: 'Hola FloWeb, soy de Medellín y quiero crear mi tienda Shopify. ¿Agendamos el diagnóstico gratis?',
   },
   shopify: {
     path: '/shopify/', name: 'Shopify',
@@ -18,16 +69,16 @@ export const pages: Record<string, PageMeta> = {
     h1: 'Shopify para vender en Colombia',
     lead: 'Configuración, themes a medida, pagos locales y migraciones desde otras plataformas.',
     takeaways: ['Configuración completa de tu tienda Shopify desde cero.', 'Pagos locales: PSE, Nequi y Mercado Pago.', 'Migración desde WooCommerce, Wix u otras plataformas.'],
-    related: ['servicios', 'metodologia', 'proceso'],
+    related: ['crearTienda', 'servicios', 'metodologia'],
   },
   servicios: {
     path: '/servicios/', name: 'Servicios',
-    title: 'Servicios de Shopify, pauta digital y SEO | FloWeb',
-    description: 'Tienda Shopify, campañas en Google y Meta Ads y SEO técnico con un solo equipo. Cotiza tu proyecto por WhatsApp.',
+    title: 'Desarrollo ecommerce en Shopify, pauta y SEO | FloWeb',
+    description: 'Desarrollo de tiendas Shopify, campañas en Google y Meta Ads y SEO técnico con un solo equipo en Colombia. Cotiza tu proyecto por WhatsApp.',
     h1: 'Servicios para vender en Shopify',
-    lead: 'Tienda, pauta digital y SEO técnico con un solo equipo.',
+    lead: 'Desarrollo de tu tienda, pauta digital y SEO técnico con un solo equipo.',
     takeaways: ['Tienda Shopify profesional, pensada para móvil.', 'Pauta digital en Google Ads y Meta Ads.', 'SEO técnico para Shopify y contenido para tu tienda.'],
-    related: ['shopify', 'proceso', 'metodologia'],
+    related: ['agenciaColombia', 'crearTienda', 'proceso'],
   },
   metodologia: {
     path: '/metodologia/', name: 'Metodología',
@@ -36,7 +87,7 @@ export const pages: Record<string, PageMeta> = {
     h1: 'Cuatro pilares, un objetivo: vender',
     lead: 'Plataforma, velocidad, tráfico y escalabilidad, pensados para el comprador colombiano.',
     takeaways: ['Shopify optimizado como base técnica.', 'Velocidad pensada para conexiones 4G.', 'Tráfico calificado con ads y SEO integrados.'],
-    related: ['servicios', 'proceso', 'shopify'],
+    related: ['servicios', 'proceso', 'crearTienda'],
   },
   proceso: {
     path: '/proceso/', name: 'Proceso',
@@ -45,7 +96,7 @@ export const pages: Record<string, PageMeta> = {
     h1: 'De cero a tienda en producción',
     lead: 'Cuatro pasos, sin reuniones interminables.',
     takeaways: ['Empezamos con un diagnóstico gratuito.', 'Primer diseño en 72 horas.', 'Tras el lanzamiento medimos y optimizamos cada mes.'],
-    related: ['shopify', 'servicios', 'contacto'],
+    related: ['crearTienda', 'servicios', 'contacto'],
   },
   contacto: {
     path: '/contacto/', name: 'Contacto',
@@ -54,6 +105,6 @@ export const pages: Record<string, PageMeta> = {
     h1: 'Hablemos de tu tienda',
     lead: 'Escríbenos y agendamos tu diagnóstico inicial gratuito.',
     takeaways: ['Diagnóstico inicial gratuito y sin compromiso.', 'Atención por WhatsApp o email.'],
-    related: ['shopify', 'servicios'],
+    related: ['agenciaMedellin', 'crearTienda', 'servicios'],
   },
 };

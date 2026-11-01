@@ -1,0 +1,17 @@
+/* clients: marcas con las que hemos trabajado (prueba social) */
+
+.clients-list { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.client { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 180px; padding: 18px 24px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); }
+.client a, .client span { font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.01em; }
+.client a:hover { color: var(--teal); }
+.client small { color: var(--muted); font-size: 0.8rem; }
+.client-more span { color: var(--muted); font-weight: 500; }
+
+.testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-bottom: 28px; text-align: left; }
+.testimonial { margin: 0; padding: 28px; background: var(--card); border: 1px solid var(--border-teal); border-radius: var(--radius); display: flex; flex-direction: column; justify-content: space-between; gap: 20px; }
+.testimonial blockquote { margin: 0; display: grid; gap: 10px; }
+.testimonial blockquote p:first-child { font-size: 1.15rem; font-weight: 700; line-height: 1.45; letter-spacing: -0.015em; color: var(--white); }
+.testimonial blockquote p + p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+.testimonial figcaption { display: flex; flex-direction: column; gap: 2px; }
+.testimonial figcaption a, .testimonial figcaption strong { font-weight: 700; color: var(--teal); text-decoration: none; }
+.testimonial figcaption span { color: var(--muted); font-size: 0.82rem; }

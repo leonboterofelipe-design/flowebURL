@@ -1,0 +1,8 @@
+---
+interface Props { items: string[] }
+const { items } = Astro.props;
+---
+<aside class="tldr" aria-label="Resumen">
+  <p class="tldr-title">En resumen</p>
+  <ul>{items.map((t) => <li>{t}</li>)}</ul>
+</aside>

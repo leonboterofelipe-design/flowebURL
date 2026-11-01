@@ -1,0 +1,17 @@
+---
+interface Props { title: string; intro?: string; items: { title: string; text: string }[] }
+const { title, intro, items } = Astro.props;
+---
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>{title}</h2>
+      {intro && <p set:html={intro} />}
+    </div>
+    <div class="method-grid feature-grid">
+      {items.map((f, i) => (
+        <div class="method-card"><div class="method-num">{String(i + 1).padStart(2, '0')}</div><h3>{f.title}</h3><p>{f.text}</p></div>
+      ))}
+    </div>
+  </div>
+</section>

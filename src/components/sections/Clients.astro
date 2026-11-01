@@ -1,0 +1,31 @@
+---
+import { clients } from '@/data/clients';
+const testimonials = clients.filter((c) => c.quote);
+---
+<section class="section clients">
+  <div class="container text-center">
+    <div class="section-header"><h2>Lo que dicen las marcas que trabajan con FloWeb</h2></div>
+    <div class="testimonials">
+      {testimonials.map((c) => (
+        <figure class="testimonial">
+          <blockquote>{c.quote!.map((q) => <p>“{q}”</p>)}</blockquote>
+          <figcaption>
+            {c.url ? <a href={c.url} target="_blank" rel="noopener">{c.name}</a> : <strong>{c.name}</strong>}
+            <span>{[c.sector, c.service].filter(Boolean).join(' · ')}</span>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+    <ul class="clients-list">
+      {clients.map((c) => (
+        <li class="client">
+          {c.url
+            ? <a href={c.url} target="_blank" rel="noopener">{c.name}</a>
+            : <span>{c.name}</span>}
+          {c.sector && <small>{c.sector}</small>}
+        </li>
+      ))}
+      <li class="client client-more"><span>y más marcas colombianas</span></li>
+    </ul>
+  </div>
+</section>

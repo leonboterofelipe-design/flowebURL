@@ -1,0 +1,39 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { pages } from '@/data/pages';
+import Clients from '@/components/sections/Clients.astro';
+import CompareTable from '@/components/sections/CompareTable.astro';
+import CtaFinal from '@/components/sections/CtaFinal.astro';
+import Faq from '@/components/sections/Faq.astro';
+import FeatureGrid from '@/components/sections/FeatureGrid.astro';
+import PageHero from '@/components/sections/PageHero.astro';
+import Problem from '@/components/sections/Problem.astro';
+import RelatedLinks from '@/components/sections/RelatedLinks.astro';
+import { colombiaFeatures, colombiaStages } from '@/data/agencias';
+import { faqsAgenciaColombia } from '@/data/faqs';
+import { serviceSchema } from '@/lib/schema';
+const m = pages.agenciaColombia;
+---
+<BaseLayout title={m.title} description={m.description} schema={[serviceSchema('Agencia Shopify en Colombia', { type: 'Country', name: 'Colombia' })]}>
+  <PageHero page="agenciaColombia" />
+  <FeatureGrid
+    title="Qué hace nuestra agencia Shopify"
+    intro='Todo lo que necesita tu tienda para vender en Colombia. Si quieres conocer el detalle técnico, revisa <a href="/shopify/">cómo trabajamos Shopify</a>.'
+    items={colombiaFeatures}
+  />
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Qué recibes en cada etapa</h2>
+        <p>Sin sorpresas: sabes qué entregamos y cuándo. Mira el <a href="/proceso/">proceso completo</a>.</p>
+      </div>
+      <CompareTable caption="Etapas del desarrollo de tu tienda Shopify con FloWeb" {...colombiaStages} />
+    </div>
+  </section>
+  <Clients />
+  {/* TODO: casos de clientes con resultados y testimonio */}
+  <Problem />
+  <Faq items={faqsAgenciaColombia} title="Preguntas frecuentes sobre contratar una agencia Shopify" />
+  <RelatedLinks current="agenciaColombia" />
+  <CtaFinal />
+</BaseLayout>

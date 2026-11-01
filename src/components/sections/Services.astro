@@ -1,5 +1,5 @@
 ---
-import { site } from '@/config/site';
+import { waLink } from '@/lib/whatsapp';
 ---
 <section id="servicios" class="section">
     <div class="container">
@@ -21,7 +21,7 @@ import { site } from '@/config/site';
           <li>SEO técnico Shopify incluido</li>
         </ul>
         <div class="service-btns">
-          <a href={site.whatsapp} class="btn btn-shopify" target="_blank" rel="noopener noreferrer">Cotizar mi Shopify →</a>
+          <a href={waLink(Astro.url.pathname)} class="btn btn-shopify" target="_blank" rel="noopener noreferrer">Cotizar mi Shopify →</a>
           <a href="/shopify/" class="btn btn-outline-teal">Ver detalles</a>
         </div>
       </div>

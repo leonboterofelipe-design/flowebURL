@@ -1,12 +1,13 @@
 ---
 import { site } from '@/config/site';
+import { waLink } from '@/lib/whatsapp';
 const path = Astro.url.pathname;
 const current = (href: string) => (path === href ? 'page' : undefined);
 ---
 <header class="navbar">
   <div class="container nav-container">
     <a class="logo" href="/" aria-label="FloWeb — Agencia Shopify Colombia">
-      <div class="logo-icon"><img src={site.logo} alt="Logo de FloWeb" width="36" height="36" loading="eager" /></div>
+      <div class="logo-icon"><img src={site.icon} alt="Logo de FloWeb, agencia Shopify Partner en Colombia" width="36" height="36" loading="eager" /></div>
       <span>Flo<em>Web</em></span>
     </a>
     <div class="shopify-partner-pill"><span class="shopify-dot"></span>Shopify Partner</div>
@@ -21,6 +22,6 @@ const current = (href: string) => (path === href ? 'page' : undefined);
         {site.nav.map((i) => <li><a href={i.href} aria-current={current(i.href)}>{i.label}</a></li>)}
       </ul>
     </details>
-    <a href={site.whatsapp} class="btn btn-shopify nav-cta" target="_blank" rel="noopener noreferrer">Diagnóstico gratis</a>
+    <a href={waLink(Astro.url.pathname)} class="btn btn-shopify nav-cta" target="_blank" rel="noopener noreferrer">Diagnóstico gratis</a>
   </div>
 </header>

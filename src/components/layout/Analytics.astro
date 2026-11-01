@@ -21,9 +21,18 @@ const gaId = import.meta.env.PUBLIC_GA4_ID;
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', gaId);
+  </script>
+)}
+{(gtmId || gaId) && (
+  <script is:inline define:vars={{ viaGtm: !!gtmId }}>
+    // Lead = clic en WhatsApp o email. Con GTM llega como evento "generate_lead" al dataLayer
+    // (crea en GTM un activador de evento personalizado con ese nombre y una etiqueta de evento GA4).
     document.addEventListener('click', function (e) {
-      var a = e.target.closest('a[href*="wa.link"], a[href^="mailto:"]');
-      if (a) gtag('event', 'generate_lead', { method: a.href.indexOf('mailto:') === 0 ? 'email' : 'whatsapp', link_url: a.href });
+      var a = e.target.closest('a[href*="wa.link"], a[href*="wa.me"], a[href^="mailto:"]');
+      if (!a || a.closest('.share')) return;
+      var params = { method: a.href.indexOf('mailto:') === 0 ? 'email' : 'whatsapp', link_url: a.href };
+      if (viaGtm) window.dataLayer.push(Object.assign({ event: 'generate_lead' }, params));
+      else gtag('event', 'generate_lead', params);
     });
   </script>
 )}
