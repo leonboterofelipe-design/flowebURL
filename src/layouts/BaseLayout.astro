@@ -17,7 +17,7 @@ const path = Astro.url.pathname;
 const canonical = new URL(path, site.url).href;
 const current = Object.values(pages).find((p) => p.path === path);
 const graph = [
-  ...(path === '/' ? [organizationSchema()] : []),
+  organizationSchema(),
   ...(current && path !== '/' ? [breadcrumbSchema(current.name, path)] : []),
   ...schema,
 ];

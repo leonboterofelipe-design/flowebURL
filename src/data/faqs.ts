@@ -1,10 +1,10 @@
 export interface Faq { q: string; a: string }
 
 export const faqsHome: Faq[] = [
-  { q: '¿Cuánto cuesta crear una tienda en Shopify?', a: 'Tiene dos partes: el plan mensual de Shopify, que cobra Shopify directamente (consulta el precio vigente en shopify.com), y el desarrollo de la tienda, que cotizamos según el catálogo, el diseño y las integraciones después del diagnóstico gratuito.' },
+  { q: '¿Cuánto cuesta crear una tienda en Shopify con FloWeb?', a: 'El desarrollo de una tienda Shopify con FloWeb cuesta desde $2.400.000 COP, precio final (FloWeb no cobra IVA). Incluye diseño de la página de inicio, categorías y páginas de producto, integración de pagos y transportadoras, carga de hasta 200 productos, pruebas, lanzamiento, capacitación y 30 días de soporte. Las integraciones por API y la carga de más de 200 productos se cotizan aparte. El plan mensual de Shopify se paga directamente a Shopify (consulta el precio vigente en shopify.com).' },
   { q: '¿Qué significa ser Shopify Partner?', a: 'Es una agencia registrada en el programa de socios de Shopify, con acceso a herramientas, recursos y soporte oficial de la plataforma.' },
   { q: '¿El diagnóstico inicial tiene costo?', a: 'No. El diagnóstico inicial es gratuito y sin compromiso: revisamos tu negocio y definimos la estrategia de tienda, SEO y publicidad.' },
-  { q: '¿Cuánto tarda en estar lista mi tienda?', a: 'El primer diseño llega en 72 horas. El tiempo total depende del tamaño del catálogo y de las integraciones, y lo definimos en el diagnóstico.' },
+  { q: '¿Cuánto tarda en estar lista mi tienda?', a: 'El primer diseño llega en 72 horas y la tienda estándar se entrega en 4 semanas desde que recibimos el pago, las fotos, los textos y los accesos: semana 1, página de inicio; semana 2, categorías y productos; semana 3, pagos y envíos; semana 4, carga, pruebas y lanzamiento. Catálogos de más de 200 productos o integraciones por API pueden tomar más tiempo.' },
   { q: '¿Trabajan solo en Medellín?', a: 'No. Estamos en Medellín y trabajamos de forma remota con marcas de toda Colombia.' },
 ];
 export const faqsCrearTienda: Faq[] = [
@@ -12,17 +12,19 @@ export const faqsCrearTienda: Faq[] = [
   { q: '¿Shopify funciona en Colombia?', a: 'Sí. Puedes vender en pesos colombianos, cobrar con pasarelas que aceptan PSE, Nequi y tarjetas, y conectar transportadoras locales y pago contraentrega.' },
   { q: '¿Qué necesito para crear mi tienda Shopify?', a: 'Un email, los datos de tu negocio, fotos y descripciones de tus productos, una cuenta en una pasarela de pagos compatible y, idealmente, un dominio propio (.com o .com.co).' },
   { q: '¿Qué páginas legales necesita una tienda online en Colombia?', a: 'Como mínimo: política de tratamiento de datos personales (Ley 1581 de 2012), términos y condiciones, y política de cambios, devoluciones y derecho de retracto (Estatuto del Consumidor, Ley 1480 de 2011).' },
+  { q: '¿Cuánto cuesta que una agencia cree mi tienda Shopify?', a: 'En FloWeb, el desarrollo de una tienda Shopify cuesta desde $2.400.000 COP, precio final (FloWeb no cobra IVA), con entrega en 4 semanas desde que recibimos el pago, las fotos, los textos y los accesos y 30 días de soporte. A eso se suma el plan mensual de Shopify, que se paga directamente a Shopify.' },
   { q: '¿Me conviene hacerlo solo o con una agencia?', a: 'Si tienes pocos productos y tiempo para aprender, puedes hacerlo tú. Si quieres un diseño propio, pagos y envíos bien integrados y una tienda lista para pauta y SEO, una agencia Shopify Partner te ahorra semanas de prueba y error.' },
 ];
 export const faqsAgenciaColombia: Faq[] = [
-  { q: '¿Cuánto cobra una agencia Shopify en Colombia?', a: 'Depende del tamaño del catálogo, el nivel de diseño y las integraciones. En FloWeb cotizamos después de un diagnóstico gratuito, para que pagues solo por lo que tu tienda necesita.' },
+  { q: '¿Cuánto cobra una agencia Shopify en Colombia?', a: 'Depende del tamaño del catálogo, el nivel de diseño y las integraciones. En FloWeb, una tienda Shopify cuesta desde $2.400.000 COP, precio final (FloWeb no cobra IVA), con entrega en 4 semanas desde que recibimos el pago, las fotos, los textos y los accesos y 30 días de soporte. Las integraciones por API y la carga de más de 200 productos se cotizan aparte después del diagnóstico gratuito.' },
   { q: '¿Por qué elegir una agencia Shopify Partner?', a: 'Porque trabaja dentro del programa oficial de Shopify, con acceso a herramientas, recursos y soporte de la plataforma, y conoce sus buenas prácticas.' },
   { q: '¿A nombre de quién queda la tienda?', a: 'De tu negocio. La cuenta de Shopify es tuya y nosotros trabajamos con acceso de colaborador.' },
   { q: '¿Trabajan con marcas de cualquier ciudad de Colombia?', a: 'Sí. Tenemos sede en Medellín y trabajamos de forma remota con marcas de todo el país.' },
 ];
 export const faqsAgenciaMedellin: Faq[] = [
   { q: '¿Atienden marcas de Envigado, Itagüí, Sabaneta o Bello?', a: 'Sí. Trabajamos con marcas de Medellín, todo el Valle de Aburrá y el resto de Colombia.' },
-  { q: '¿Cuánto tarda crear una tienda Shopify?', a: 'El primer diseño llega en 72 horas. El tiempo total depende del catálogo y las integraciones, y lo definimos en el diagnóstico.' },
+  { q: '¿Cuánto cuesta una tienda Shopify en Medellín con FloWeb?', a: 'Desde $2.400.000 COP, precio final (FloWeb no cobra IVA), con entrega en 4 semanas desde que recibimos el pago, las fotos, los textos y los accesos y 30 días de soporte. Las integraciones por API y la carga de más de 200 productos se cotizan aparte; el plan mensual de Shopify se paga directamente a Shopify.' },
+  { q: '¿Cuánto tarda crear una tienda Shopify con FloWeb?', a: 'El primer diseño llega en 72 horas y la tienda estándar se entrega en 4 semanas desde que recibimos el pago, las fotos, los textos y los accesos. Catálogos de más de 200 productos o integraciones por API pueden tomar más tiempo.' },
   { q: '¿Pueden configurar envíos solo para Medellín?', a: 'Sí. Podemos limitar los envíos a Medellín y el Valle de Aburrá, o combinarlos con envíos nacionales, con tarifas por zona.' },
   { q: '¿Qué necesito para empezar?', a: 'Escribirnos por WhatsApp. En el diagnóstico gratuito revisamos tus productos, tus canales actuales y lo que necesita tu tienda.' },
 ];

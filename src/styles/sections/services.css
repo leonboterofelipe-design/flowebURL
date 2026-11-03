@@ -194,3 +194,5 @@
   }
 }
 
+.service-price { margin: 12px 0 4px; font-size: .95rem; }
+.service-price strong { font-size: 1.15rem; }
