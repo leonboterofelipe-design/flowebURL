@@ -32,3 +32,36 @@ export const medellinShipping = {
     ['Resto de Colombia', 'Coordinadora, Servientrega u otra transportadora, con contraentrega opcional'],
   ],
 };
+
+export const tiendasMedellinIncluye = {
+  head: ['Qué incluye', 'Detalle'],
+  rows: [
+    ['Diseño', 'Página de inicio, categorías y páginas de producto con la identidad de tu marca, pensadas primero para celular'],
+    ['Pagos', 'Pasarela con PSE, Nequi, tarjetas y Mercado Pago, más pago contraentrega si lo ofreces'],
+    ['Envíos', 'Tarifas por zona para Medellín y el Valle de Aburrá, y transportadoras nacionales'],
+    ['Catálogo', 'Carga de hasta 200 productos con variantes, inventario y colecciones'],
+    ['Lanzamiento', 'Pruebas de compra, páginas legales, capacitación para administrar la tienda y 30 días de soporte'],
+    ['Se cotiza aparte', 'Integraciones por API (ERP, inventario, facturación) y catálogos de más de 200 productos'],
+  ],
+};
+
+export const tiendasMedellinSemanas = {
+  head: ['Semana', 'Qué hacemos'],
+  rows: [
+    ['Antes de empezar', 'Diagnóstico gratuito; recibimos el pago, las fotos, los textos y los accesos'],
+    ['Semana 1', 'Página de inicio (primer diseño en 72 horas)'],
+    ['Semana 2', 'Categorías y páginas de producto'],
+    ['Semana 3', 'Pagos y envíos'],
+    ['Semana 4', 'Carga de productos, pruebas y lanzamiento'],
+  ],
+};
+
+export const tiendasMedellinPlataformas = {
+  head: ['', 'Shopify (lo que usamos)', 'WooCommerce', 'Desarrollo a medida'],
+  rows: [
+    ['Tiempo de salida', '4 semanas para una tienda estándar', 'Similar, más configuración de servidor', 'Meses'],
+    ['Hosting y seguridad', 'Incluidos en el plan de Shopify', 'Los contratas y mantienes tú', 'Los contratas y mantienes tú'],
+    ['Quién la administra', 'Tu equipo, desde un panel sencillo', 'Tu equipo, con plugins que actualizar', 'Depende del desarrollador'],
+    ['Cuándo conviene', 'Marcas que quieren vender pronto y crecer', 'Equipos con soporte técnico propio', 'Procesos que ninguna plataforma resuelve'],
+  ],
+};

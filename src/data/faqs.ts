@@ -51,3 +51,11 @@ export const faqsContacto: Faq[] = [
   { q: '¿Cuál es el canal más rápido para contactarlos?', a: 'WhatsApp. También puedes escribirnos a info@floweb.com.co.' },
   { q: '¿Atienden marcas fuera de Medellín?', a: 'Sí. Trabajamos de forma remota con marcas de toda Colombia.' },
 ];
+export const faqsTiendasMedellin: Faq[] = [
+  { q: '¿Cuánto cuesta el diseño de una tienda virtual en Medellín con FloWeb?', a: 'Desde $2.400.000 COP, precio final (FloWeb no cobra IVA), con entrega en 4 semanas desde que recibimos el pago, las fotos, los textos y los accesos, y 30 días de soporte. Las integraciones por API y la carga de más de 200 productos se cotizan aparte; el plan mensual de Shopify se paga directamente a Shopify.' },
+  { q: '¿Qué diferencia hay entre una tienda virtual y una página web?', a: 'Una página web presenta tu empresa; una tienda virtual vende: muestra el catálogo con precios, cobra en línea con PSE, Nequi o tarjeta, calcula el envío y te avisa de cada pedido. FloWeb crea tiendas virtuales en Shopify.' },
+  { q: '¿Por qué FloWeb crea las tiendas virtuales en Shopify?', a: 'Porque Shopify incluye hosting, seguridad y un checkout probado, así que tu equipo administra la tienda sin depender de un programador. FloWeb es Shopify Partner registrado. Si ya vendes en WooCommerce o Wix, migramos tu tienda.' },
+  { q: '¿FloWeb es Shopify Plus Partner?', a: 'No. FloWeb es Shopify Partner registrado y trabaja con los planes estándar de Shopify, que cubren a la mayoría de marcas y empresas medianas en Colombia. Shopify Plus es el plan para operaciones de alto volumen.' },
+  { q: '¿Podré administrar la tienda yo mismo?', a: 'Sí. La cuenta de Shopify queda a nombre de tu empresa y, antes del lanzamiento, te capacitamos para subir productos, cambiar precios y gestionar pedidos.' },
+  { q: '¿Trabajan con empresas fuera de Medellín?', a: 'Sí. Tenemos sede en Medellín, atendemos todo el Valle de Aburrá y trabajamos de forma remota con empresas de toda Colombia.' },
+];

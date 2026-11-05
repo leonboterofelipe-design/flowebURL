@@ -1,0 +1,52 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { pages } from '@/data/pages';
+import Clients from '@/components/sections/Clients.astro';
+import CompareTable from '@/components/sections/CompareTable.astro';
+import CtaFinal from '@/components/sections/CtaFinal.astro';
+import Faq from '@/components/sections/Faq.astro';
+import PageHero from '@/components/sections/PageHero.astro';
+import RelatedLinks from '@/components/sections/RelatedLinks.astro';
+import { tiendasMedellinIncluye, tiendasMedellinSemanas, tiendasMedellinPlataformas } from '@/data/agencias';
+import { faqsTiendasMedellin } from '@/data/faqs';
+import { serviceSchema } from '@/lib/schema';
+const m = pages.tiendasMedellin;
+---
+<BaseLayout title={m.title} description={m.description} schema={[serviceSchema('Diseño de tiendas virtuales en Medellín', { type: 'City', name: 'Medellín' })]}>
+  <PageHero page="tiendasMedellin" />
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>¿Qué incluye el diseño de una tienda virtual con FloWeb?</h2>
+        <p>La tienda virtual estándar de FloWeb cuesta desde $2.400.000 COP, precio final, e incluye todo lo necesario para vender en línea desde Medellín a toda Colombia.</p>
+      </div>
+      <CompareTable caption="Qué incluye el diseño de una tienda virtual con FloWeb en Medellín" {...tiendasMedellinIncluye} />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>¿Cuánto tarda crear un ecommerce en Medellín?</h2>
+        <p>FloWeb entrega una tienda virtual estándar en 4 semanas, contadas desde que recibimos el pago, las fotos, los textos y los accesos.</p>
+      </div>
+      <CompareTable caption="Cronograma para crear una tienda virtual con FloWeb" {...tiendasMedellinSemanas} />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>¿Qué plataforma conviene para una tienda virtual?</h2>
+        <p>FloWeb, agencia de ecommerce en Medellín, crea las tiendas en Shopify porque tu equipo puede administrarlas sin programador. Así se compara con las alternativas. ¿Quieres los detalles de Shopify? Mira nuestra <a href="/agencia-shopify-medellin/">agencia Shopify en Medellín</a>.</p>
+      </div>
+      <CompareTable caption="Shopify, WooCommerce o desarrollo a medida para una tienda virtual en Colombia" {...tiendasMedellinPlataformas} />
+    </div>
+  </section>
+
+  <Clients />
+  <Faq items={faqsTiendasMedellin} title="Preguntas frecuentes sobre diseño de tiendas virtuales en Medellín" />
+  <RelatedLinks current="tiendasMedellin" />
+  <CtaFinal />
+</BaseLayout>
